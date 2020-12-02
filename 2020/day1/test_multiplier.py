@@ -13,7 +13,7 @@ class MultiplierTestCase(unittest.TestCase):
     self.assertEqual(test.result, -1)
   
   def test_advent_of_code_input(self):
-    with open('input.txt', 'r') as fh:
+    with open('day1/input.txt', 'r') as fh:
       num_list = [int(line) for line in fh]
       test = Multiplier(num_list)
       self.assertEqual(test.result, 436404)
