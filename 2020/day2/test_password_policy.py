@@ -20,6 +20,15 @@ class PasswordPolicyTestCase(unittest.TestCase):
         test = PasswordPolicy(char, cri, input)
         counter += 1 if test.policyChecker() else 0
       self.assertEqual(counter, 519)
-      
+
+  def test_adventofcode_input_part2(self):
+    with open('day2/input.txt', 'r') as fh:
+      counter = 0
+      for line in fh:
+        cri, char, input = line.split()
+        test = PasswordPolicy(char, cri, input)
+        counter += 1 if test.policyCheckerpart2() else 0
+      self.assertEqual(counter, 708)
+
 if __name__ == '__main__': 
   unittest.main() 

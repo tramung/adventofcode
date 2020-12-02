@@ -9,3 +9,6 @@ class PasswordPolicy:
   def policyChecker(self):
     return self.lower_lim <= self.input.count(self.char) <= self.upper_lim
   
+  def policyCheckerpart2(self):
+    return (self.input[self.lower_lim - 1] == self.char) ^ (self.input[self.upper_lim - 1] == self.char)
+  
