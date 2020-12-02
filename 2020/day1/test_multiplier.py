@@ -11,6 +11,12 @@ class MultiplierTestCase(unittest.TestCase):
     test = Multiplier([1721, 366, 0, 675])
     self.assertFalse(test.summationCheck())
     self.assertEqual(test.result, -1)
+  
+  def test_advent_of_code_input(self):
+    with open('input.txt', 'r') as fh:
+      num_list = [int(line) for line in fh]
+      test = Multiplier(num_list)
+      self.assertEqual(test.result, 436404)
 
 if __name__ == '__main__': 
   unittest.main() 
